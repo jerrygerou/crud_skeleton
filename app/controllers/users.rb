@@ -1,21 +1,28 @@
 get '/users/new' do
-  erb :'/users/new'
+ erb :'users/new'
 end
 
 post '/users' do
-  @user = User.new(params[:user])
-  if @user.save
-    session[:user_id] = @user.id
-    redirect "/users/#{@user.id}"
+  return redirect '/' if logged_in?
+  user = User.new(params[:user])
+
+  if user.save
+    session[:user_id] = user.id
+    redirect '/'
   else
-    @errors = @user.errors.full_messages
-    erb :'/users/new'
+    @errors = user.errors.full_messages
+    erb :'users/new'
   end
 end
 
-get "/users/:id" do
-  @user =User.find(params[:id])
-  if @user.authorized?
-    erb :'/users/show'
+get '/users/:id' do
+ 
+  @user = User.find(params[:id])
+  
+  if @user.id == current_user.id
+    erb :'users/show'
+  else
+    redirect '/'
   end
+
 end
