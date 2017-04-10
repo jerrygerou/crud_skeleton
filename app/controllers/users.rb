@@ -16,7 +16,6 @@ post '/users' do
 end
 
 get '/users/:id' do
- 
   @user = User.find(params[:id])
   
   if @user.id == current_user.id
