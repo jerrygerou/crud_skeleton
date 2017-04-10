@@ -1,0 +1,147 @@
+body {
+  font-family: 'Lora', 'Times New Roman', serif;
+  font-size: 20px;
+  color: #333333;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-weight: 800;
+  margin-left: 20px;
+
+}
+
+p {
+  margin-left: 20px
+
+}
+
+a {
+  color: #333333;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #128e12;
+}
+
+a img:hover,
+a img:focus {
+  cursor: zoom-in;
+}
+
+blockquote {
+  color: #777777;
+  font-style: italic;
+}
+
+nav a {
+  font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  color: white;
+  text-decoration: none;
+}
+
+nav {
+  background-color: black;
+  padding: 10px;
+  width: 100%;
+  position: fixed;
+}
+
+nav li {
+  display: inline;
+  margin-right: 10px;
+  padding-right: 20px;
+  padding-left: 10px;
+}
+
+
+.container {
+  padding-top: 75px;
+  padding-left: 25px;
+  padding-bottom: 75px;
+}
+
+.error_container {
+  color: black;
+}
+
+.qac_body input[type=text]{
+    width: 300px;
+    padding: 5px 5px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    font-size: .75em;
+}
+
+.welcome {
+  background:
+    linear-gradient(
+      rgba(0, 0, 0, 0.7),
+      rgba(0, 100, 0, 0.7)
+    ),
+    url(https://static1.squarespace.com/static/535a6a68e4b01c3d34585aa9/535bf005e4b0f06595be6028/535bf008e4b0317988a9a639/1398534153271/Chicago+Theater.jpg?format=1500w);
+  height: 400px;
+}
+
+.welcome h1{
+  padding-top: 180px;
+  color: white;
+  font-size: 2em;
+  text-align: center
+}
+
+.welcome h3{
+  padding-top: 5px;
+  color: white;
+  font-size: 1.5em;
+  text-align: center
+}
+
+.questions_on_index p{
+  font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  color: #333333;
+  text-decoration: none;
+  padding-left: 20px;
+  margin-top: 15px;
+
+}
+
+.action_buttons {
+  padding: 20px;
+}
+
+.login {
+  margin-left: 20px;
+}
+
+.login input[type=text], [type=password], [type=email] {
+    max-width: 150px;
+    padding: 5px 5px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    font-size: .75em;
+}
+
+input[type=submit] {
+    background-color: #3f4042;
+    border-radius:3px;
+    color: #fff;
+    font-size: 16px;
+    text-decoration: none;
+    cursor: pointer;
+    border: solid black;
+    margin-left: 30px;
+}
+
+.logout {
+  float: right;
+  padding-right: 40px;
+  font-size: 16px;
+  margin-top: -5px;
+}
