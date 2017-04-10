@@ -1,0 +1,45 @@
+<html>
+<head>
+  <link rel="stylesheet" type="text/css" href="/css/normalize.css">
+  <link rel="stylesheet" type="text/css" href="/css/application.css">
+
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+  <script src="/js/application.js?app=skills"></script>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Overalls Overflow</title>
+</head>
+<body>
+  <nav>
+    <ul>
+      <% if logged_in? %>
+        <li>
+          <a href="/">Home</a>
+        </li>
+        <li>
+          <a>Welcome, <%= (current_user.username).capitalize %></a>
+        </li>
+        <li>
+          <form class='logout' method='post' action='/sessions'>
+            <input type ="hidden" name="_method" value="delete">
+            <input type="submit" value="Logout">
+          </form>
+        </li>
+      <% else %>
+        <li>
+          <a href="/">Home</a>
+        </li>
+        <li>
+          <a href="/users/new">Register</a>
+        </li>
+        <li>
+          <a href="/sessions/new">Login</a>
+        </li>
+      <% end %>
+    </ul>
+  </nav>
+
+  <%= yield %>
+</body>
+</html>

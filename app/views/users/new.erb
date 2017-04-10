@@ -1,0 +1,22 @@
+<div class="container">
+  <h1>New User Sign Up</h1>
+
+  <% if @errors %>
+     <div class="error_container">
+         <p><strong> There is a problem</strong></p>
+         <% @errors.each do |error| %>
+           <p><%= error %></p>
+         <% end %>
+     </div>
+  <% end %>
+
+  <form class="login" method='post' action='/users'>
+    <label>Username:</label>
+      <input name="user[username]" type="text">
+    <label >Email:</label>
+      <input name="user[email]" type="text">
+    <label>Password:</label>
+      <input name="user[password]" type="password">
+      <input type="submit" value="Sign up" class="button">
+  </form>
+</div>
