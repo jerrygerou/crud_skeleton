@@ -15,5 +15,7 @@ end
 
 get "/users/:id" do
   @user =User.find(params[:id])
+  if @user.authorized?
     erb :'/users/show'
+  end
 end

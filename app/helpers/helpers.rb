@@ -1,6 +1,6 @@
 module UsersHelpers
   def current_user
-    User.find_by(id: session[:user_id]) if logged_in?
+    @current_user = User.find_by(id: session[:user_id]) if logged_in?
   end
 
   def logged_in?
@@ -11,7 +11,7 @@ module UsersHelpers
     session[:user_id] = user.id
   end
 
-  def author?(user_id)
+  def authorized?(user_id)
     session[:user_id] == user_id
   end
 

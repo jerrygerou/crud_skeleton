@@ -18,3 +18,4 @@ delete '/sessions' do
 
   redirect '/sessions/new'
 end
+
