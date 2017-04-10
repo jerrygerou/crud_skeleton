@@ -16,6 +16,6 @@ end
 delete '/sessions' do
   session[:user_id] = nil
 
-  redirect '/sessions/new'
+  redirect '/'
 end
 
