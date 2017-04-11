@@ -2,12 +2,9 @@
   <h1>New User Sign Up</h1>
 
   <% if @errors %>
-     <div class="error_container">
-         <p><strong> There is a problem</strong></p>
          <% @errors.each do |error| %>
            <p><%= error %></p>
          <% end %>
-     </div>
   <% end %>
 
   <form class="login" method='post' action='/users'>
