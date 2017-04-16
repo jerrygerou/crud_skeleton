@@ -60,6 +60,16 @@ nav li {
   padding-left: 10px;
 }
 
+footer {
+  background-color: black;
+  padding: 10px;
+  width: 100%;
+  position: fixed;
+  font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  color: white;
+  text-decoration: none;
+  text-align: center;
+}
 
 .container {
   padding-top: 75px;
